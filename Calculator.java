@@ -1,13 +1,34 @@
 public class Calculator{
-  
-  private int result;
+  /*
+	Класс для обработки аргументов.
+  */
+  private double result;
 
-  public void add(int arg1, int arg2)
-  { this.result = arg1 + arg2;}
+  public void calculate(double arg1, double arg2, char c)
+  {
+	if(c == '+'){this.result = arg1 + arg2;}
+	if(c == '-'){this.result = arg1 - arg2;}
+	if(c == '*'){this.result = arg1 * arg2;}
+	if(c == '/')
+	{
+		if(arg1 == 0 || arg2 == 0)
+		{
+			throw new ArithmeticException("Attempt to divide by zero");
+		}
+		else
+		{
+			this.result = arg1 / arg2;
+		}
+	}
+  }
 
-  public int get_result()
-  {return this.result;}	
+  public double get_result()
+  {
+	return this.result;
+  }	
 
-  public void clear_result()
-  {this.result = 0;}
+  public void clean_result()
+  {
+	this.result = 0;
+  }
 }

@@ -1,20 +1,28 @@
 import java.util.Scanner;
 /*
-	Класс для ввода пользователя.
+	Класс для запуска калькулятора и ввода аргументов.
 */
 public class InteractRunner{
   public static void main(String[]args){
   	Scanner reader = new Scanner(System.in);
-	Calculator calc = new Calculate();	
-	while(true)
-	{
+	Calculator calc = new Calculator();
+	String str = "No";
+  	while(!str.equals("Yes"))
+	{           
 	   System.out.println("Input arg 1: ");
-	   int first = reader.nextInt();
+	   double first = reader.nextInt();
 	   System.out.println("Input arg 2: ");
-	   int second = reader.nextInt();
-	   calc.add(first,second);
+	   double second = reader.nextInt();
+
+	   System.out.println("Select operation +, -, *, /,");
+	   char symbol = reader.next().charAt(0);
+
+           calc.calculate(first,second,symbol);
 	   System.out.println("Result: " + calc.get_result());
-	   calc.clear_result();
-	}
+	   calc.clean_result();
+
+	   System.out.println("Exit: Yes/No");
+	   str = reader.next();	   	   
+	}		
   }
 }
