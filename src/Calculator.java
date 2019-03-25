@@ -17,9 +17,8 @@ public class Calculator{
 	if(c == '*'){this.result = arg1 * arg2;}
 	if(c == '/')
 	{
-	 if(arg1 == 0 || arg2 == 0){throw new ArithmeticException("Attempt to divide by zero");}
-	 
-	 else{this.result = arg1 / arg2;}
+		if(arg1 == 0 || arg2 == 0){throw new ArithmeticException();}
+		else{this.result = arg1 / arg2;}
 	}
   }
 
@@ -29,20 +28,28 @@ public class Calculator{
 
   public void programm()
   {
+	ConsoleInfo.message();
+
 	inpt.input_args();
 	
 	double first = inpt.get_value();
 	
+	ConsoleInfo.show_arg(first);
+
 	inpt.input_args();
 	
 	double second = inpt.get_value();
+
+	ConsoleInfo.show_arg(second);
 	
 	char symbol = inpt.get_operation();
+
+	ConsoleInfo.show_operation(symbol);
 	
 	calculate(first,second,symbol);
-
-	System.out.println(first + " " + symbol + " " + second + " = " + get_result());
 	
+	ConsoleInfo.show_result(get_result());
+
 	clean_result();
   }
 
