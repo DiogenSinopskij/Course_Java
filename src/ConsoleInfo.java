@@ -1,3 +1,6 @@
+/*
+	Абстрактный класс для вывода информации о аргуметнах введеных пользователем.
+*/
 abstract class ConsoleInfo{
 	
 public static void message(){System.out.println("Input arg:");}

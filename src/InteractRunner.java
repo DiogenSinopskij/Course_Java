@@ -1,6 +1,7 @@
 import java.util.Scanner;
 /*
 	Класс для запуска калькулятора и ввода аргументов.
+	calc.programm() - основной метод из класса Calculator.
 */
 public class InteractRunner{
   public static void main(String[]args){

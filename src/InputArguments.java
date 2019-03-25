@@ -1,6 +1,6 @@
 import java.util.Scanner;
 /*
-Класс для обработки введеных данных.
+	Класс для ввода данных пользователем с клавиатуры.	
 */
 public class InputArguments{
 	

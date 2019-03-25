@@ -1,9 +1,12 @@
 import java.util.Scanner;
+/*
+	Класс для обработки введеных данных.
+	В методе calculate используется исключение ArithmeticException, которое сработет в случае
+	деления на ноль.	
+*/
 
 public class Calculator{
-  /*
-	Класс для обработки аргументов.
-  */
+ 
 private double result;
   
 InputArguments inpt = null;
