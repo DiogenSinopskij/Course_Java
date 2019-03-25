@@ -4,30 +4,32 @@ public class Calculator{
   /*
 	Класс для обработки аргументов.
   */
-  private double result;
+private double result;
   
-  InputArguments inpt = null;
+InputArguments inpt = null;
 
-  public Calculator(){inpt = new InputArguments();}
+public Calculator(){inpt = new InputArguments();}
 
-  private void calculate(double arg1, double arg2, char c){
+private void calculate(double arg1, double arg2, char c){
 	
-	if(c == '+'){this.result = arg1 + arg2;}
-	if(c == '-'){this.result = arg1 - arg2;}
-	if(c == '*'){this.result = arg1 * arg2;}
-	if(c == '/')
-	{
-		if(arg1 == 0 || arg2 == 0){throw new ArithmeticException();}
-		else{this.result = arg1 / arg2;}
-	}
-  }
+ if(c == '+'){this.result = arg1 + arg2;}
+ if(c == '-'){this.result = arg1 - arg2;}
+ if(c == '*'){this.result = arg1 * arg2;}
+ if(c == '/')
+ {
+	if(arg1 == 0 || arg2 == 0)
+	{throw new ArithmeticException();}
+	else
+	{this.result = arg1 / arg2;}
+ }
+}
 
-  private double get_result(){return this.result;}	
+private double get_result(){return this.result;}	
 
-  private void clean_result(){this.result = 0;}
+private void clean_result(){this.result = 0;}
 
-  public void programm()
-  {
+public void programm()
+{
 	ConsoleInfo.message();
 
 	inpt.input_args();
@@ -51,6 +53,6 @@ public class Calculator{
 	ConsoleInfo.show_result(get_result());
 
 	clean_result();
-  }
+}
 
 }
